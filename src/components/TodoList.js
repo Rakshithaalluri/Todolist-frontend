@@ -11,7 +11,7 @@ const TodoList = ({ token }) => {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await fetch('http://localhost:3000/todos', {
+        const response = await fetch('https://backend-todolist-fx5n.onrender.com/todos', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -47,7 +47,7 @@ const TodoList = ({ token }) => {
 
     if (formIsValid) {
       try {
-        const response = await fetch('http://localhost:3000/todos', {
+        const response = await fetch('https://backend-todolist-fx5n.onrender.com/todos', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const TodoList = ({ token }) => {
 
     if (formIsValid && editingTodoId !== null) {
       try {
-        const response = await fetch(`http://localhost:3000/todos/${editingTodoId}`, {
+        const response = await fetch(`https://backend-todolist-fx5n.onrender.com/todos/${editingTodoId}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ const TodoList = ({ token }) => {
 
   const handleDeleteTodo = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/todos/${id}`, {
+      const response = await fetch(`https://backend-todolist-fx5n.onrender.com/todos/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
