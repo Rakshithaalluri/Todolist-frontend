@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Todo List application built with React for the frontend and a Node.js/Express backend. The app allows users to register, login, and manage their tasks (CRUD operations).
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User authentication (Register/Login)
+- Add, edit, delete tasks
+- Fetch and display tasks from the backend
+- Form validation for user inputs
+- Token-based authentication using JWT
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- React.js
+- CSS for styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- Node.js
+- Express
+- JWT for user authentication
+- SQLite for the database
 
-### `npm test`
+### Additional Libraries/Tools
+- Fetch API for making requests
+- React Hooks for state management
+- UseState, UseEffect
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- NPM 
+- React.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Rakshithaalluri/todo-list.git
+## Navigate to the backend directory:
+cd backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Install the required dependencies:
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Set up the environment file .env with your JWT secret key and port configuration:
+JWT_SECRET=your_secret_key
+PORT=3001
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Initialize the database by running:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+node initializeDatabase.js
 
-## Learn More
+## Start the backend server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Frontend
 
-### Code Splitting
+## Open another terminal and navigate to the frontend directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+cd frontend
 
-### Analyzing the Bundle Size
+## Install the required dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm install
 
-### Making a Progressive Web App
+## Start the React app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm start
 
-### Advanced Configuration
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Register a new account.
 
-### Deployment
+Login using your credentials.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Once logged in, you can:
 
-### `npm run build` fails to minify
+Add new tasks by providing a description and status.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Edit or update an existing task.
+
+Delete tasks.
+
+View all your tasks.
+
+### API Endpoints
+## Authentication
+
+POST /login – Log in a user.
+
+POST /register – Register a new user.
+
+## Todos
+GET /todos – Get all todos.
+
+POST /todos – Add a new todo.
+
+PUT /todos/:id – Update a specific todo by ID.
+
+DELETE /todos/:id – Delete a specific todo by ID.
